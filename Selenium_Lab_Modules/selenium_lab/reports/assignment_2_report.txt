@@ -1,0 +1,4 @@
+Assignment 2 - Synchronization & Explicit Waits
+Status: PASSED
+Dynamic Text: Hello World!
+Command to Run: python assignment_2_explicit_wait.py

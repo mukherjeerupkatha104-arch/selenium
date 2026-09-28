@@ -1,0 +1,7 @@
+Assignment 5 - HTML Web Table Extractor
+Status: PASSED
+Person: Jason Doe
+Email: jdoe@hotmail.com
+Due: $100.00
+Website: http://www.jdoe.com
+Command to Run: python assignment_5_web_table.py

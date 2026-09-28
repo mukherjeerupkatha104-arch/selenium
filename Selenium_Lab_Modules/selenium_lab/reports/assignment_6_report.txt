@@ -1,0 +1,10 @@
+Assignment 6 - Windows, Tabs & Iframes
+Status: PASSED
+Iframe: Text entered successfully
+Iframe: Switched back to main page successfully
+New Window: Opened successfully
+New Window Title: New Window
+New Window: Closed successfully
+Original Window: Returned successfully
+Original Window: Handle verified successfully
+Command to Run: python assignment_6_windows_iframes.py

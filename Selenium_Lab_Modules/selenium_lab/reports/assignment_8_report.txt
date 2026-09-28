@@ -1,0 +1,34 @@
+Assignment 8 - Data-Driven Automation
+
+
+Test Case 1
+Username: standard_user
+Expected Result: success
+Actual Result: success
+Status: PASSED
+
+Test Case 2
+Username: standard_user
+Expected Result: error
+Actual Result: error
+Status: PASSED
+
+Test Case 3
+Username: wrong_user
+Expected Result: error
+Actual Result: error
+Status: PASSED
+
+Test Case 4
+Username: wrong_user
+Expected Result: error
+Actual Result: error
+Status: PASSED
+
+Test Case 5
+Username: locked_out_user
+Expected Result: error
+Actual Result: error
+Status: PASSED
+
+Cpmmand to Run: python tests\assignment_8_data_driven.py

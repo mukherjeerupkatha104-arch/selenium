@@ -1,0 +1,4 @@
+Assignment 1 - Multi-Locator Challenge
+Status: PASSED
+URL: https://www.saucedemo.com/inventory.html
+Command to run: python assignment_1_login.py
