@@ -1,0 +1,9 @@
+workflow-aggregator
+htmlpublisher
+robot
+credentials
+credentials-binding
+plain-credentials
+timestamper
+ws-cleanup
+pipeline-stage-view

@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Cartograph-QA: full suite",
+      "type": "shell",
+      "command": "${workspaceFolder}\\Cartograph-QA\\.venv-local\\Scripts\\robot.exe",
+      "args": ["-d", "results", "-v", "HEADLESS:true", "tests"],
+      "options": {
+        "cwd": "${workspaceFolder}/Cartograph-QA"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Cartograph-QA: smoke",
+      "type": "shell",
+      "command": "${workspaceFolder}\\run_cartograph.ps1",
+      "args": ["-IncludeTag", "smoke"],
+      "problemMatcher": []
+    }
+  ]
+}

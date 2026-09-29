@@ -1,0 +1,58 @@
+pipeline {
+  agent {
+    node {
+      customWorkspace 'C:\\Users\\User\\Downloads\\New project\\Cartograph-QA'
+    }
+  }
+  parameters {
+    choice(name: 'BROWSER', choices: ['chrome', 'firefox'], description: 'WebDriver browser')
+    choice(name: 'ENVIRONMENT', choices: ['qa', 'demo'], description: 'Configuration profile')
+    choice(name: 'TAGS', choices: ['regression', 'smoke', 'cart'], description: 'Tag expression to include')
+    choice(name: 'HEADLESS', choices: ['true', 'false'], description: 'Browser display mode')
+  }
+  options {
+    timestamps()
+    buildDiscarder(logRotator(numToKeepStr: '10'))
+  }
+  stages {
+    stage('Prepare') {
+      steps {
+        bat '''
+          if not exist .venv-local\\Scripts\\robot.exe (
+            py -3.11 -m venv .venv-local
+            .venv-local\\Scripts\\python.exe -m pip install -r requirements.txt
+          ) else (
+            echo Using existing Cartograph-QA virtual environment
+          )
+        '''
+      }
+    }
+    stage('Run Robot') {
+      steps {
+        withCredentials([usernamePassword(credentialsId: 'automation-exercise-test-user', usernameVariable: 'AE_EMAIL', passwordVariable: 'AE_PASSWORD')]) {
+          bat ".venv-local\\Scripts\\robot.exe -d results -i ${params.TAGS} -v BROWSER:${params.BROWSER} -v ENVIRONMENT:${params.ENVIRONMENT} -v HEADLESS:${params.HEADLESS} -v BUILD_ID:%BUILD_NUMBER% tests"
+        }
+      }
+    }
+  }
+  post {
+    always {
+      bat ".venv-local\\Scripts\\python.exe libraries\\generate_summary.py --output results\\output.xml --result-dir results --browser ${params.BROWSER} --environment ${params.ENVIRONMENT} --build %BUILD_NUMBER%"
+      archiveArtifacts artifacts: 'results/**', allowEmptyArchive: true
+      publishHTML(target: [
+        reportDir: 'results',
+        reportFiles: 'summary.html',
+        reportName: 'Cartograph QA Summary',
+        keepAll: true,
+        allowMissing: true
+      ])
+      robot(
+        outputPath: 'results',
+        outputFileName: 'output.xml',
+        reportFileName: 'report.html',
+        logFileName: 'log.html',
+        disableArchiveOutput: false
+      )
+    }
+  }
+}

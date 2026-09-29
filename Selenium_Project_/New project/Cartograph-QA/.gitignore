@@ -1,0 +1,11 @@
+.venv/
+.venv-local/
+.jenkins-home/
+ci/jenkins/jenkins.war
+ci/jenkins/jenkins-plugin-manager.jar
+__pycache__/
+*.py[cod]
+results*/
+.env
+.idea/
+.vscode/

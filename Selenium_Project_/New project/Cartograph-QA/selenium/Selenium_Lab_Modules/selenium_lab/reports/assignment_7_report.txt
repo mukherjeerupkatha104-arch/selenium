@@ -1,0 +1,8 @@
+Assignment 7 - Page Object Model (POM)
+Status: PASSED
+Login: Successful
+Inventory Page: Reached successfully
+Page Title: Products
+Page Object Model: Implemented successfully
+Assertions: Passed
+Command to Run: python tests\assignment_7_pom.py

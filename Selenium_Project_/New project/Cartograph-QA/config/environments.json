@@ -1,0 +1,14 @@
+{
+  "qa": {
+    "base_url": "https://automationexercise.com/",
+    "timeout": "20s",
+    "headless": "true",
+    "screenshot_on_failure": "true"
+  },
+  "demo": {
+    "base_url": "https://automationexercise.com/",
+    "timeout": "20s",
+    "headless": "false",
+    "screenshot_on_failure": "true"
+  }
+}

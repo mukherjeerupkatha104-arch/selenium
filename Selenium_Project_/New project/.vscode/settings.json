@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/Cartograph-QA/.venv-local/Scripts/python.exe",
+  "terminal.integrated.cwd": "${workspaceFolder}/Cartograph-QA"
+}

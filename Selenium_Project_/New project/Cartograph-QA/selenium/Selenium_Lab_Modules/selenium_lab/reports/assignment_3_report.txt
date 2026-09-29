@@ -1,0 +1,5 @@
+Assignment 3 - Dynamic Dropdowns & Checkboxes
+Status: PASSED
+Checkbox: Monday selected
+Autocomplete: Java selected
+Command to Run: python assignment_3_dropdown_checkbox.py

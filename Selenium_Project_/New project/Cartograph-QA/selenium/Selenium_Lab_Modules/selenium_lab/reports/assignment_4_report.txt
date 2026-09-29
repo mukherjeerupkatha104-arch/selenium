@@ -1,0 +1,6 @@
+Assignment 4 - JavaScript Alerts and Confirms
+Status: PASSED
+JavaScript Alert: Accepted
+JavaScript Confirm: Dismissed
+JavaScript Prompt: Text entered and accepted
+Command to Run: python assignment_4_alerts.py

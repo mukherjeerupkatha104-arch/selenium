@@ -1,0 +1,20 @@
+{
+  "blue_top": {
+    "search": "Blue Top",
+    "product": "Blue Top",
+    "expected_result": "found",
+    "expected_cart": "Blue Top"
+  },
+  "men_tshirt": {
+    "search": "Men Tshirt",
+    "product": "Tshirt",
+    "expected_result": "found",
+    "expected_cart": "Tshirt"
+  },
+  "unknown_product": {
+    "search": "Cartograph Imaginary Product 2026",
+    "product": "",
+    "expected_result": "not_found",
+    "expected_cart": ""
+  }
+}

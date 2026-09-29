@@ -1,0 +1,3 @@
+robotframework==7.4
+robotframework-seleniumlibrary==6.8.0
+robotframework-ride==2.1.3
